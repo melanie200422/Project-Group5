@@ -17,3 +17,9 @@ Route::get('/product/{slug}', [HomeController::class, 'productDetails'])
 
 
 
+<<<<<<< HEAD
+=======
+Route::get('/', function () {
+    return view('welcome'); DFDHJHDEG
+});
+>>>>>>> a71bf3e8e4a57c688b86289a7542ffb38894b41b
