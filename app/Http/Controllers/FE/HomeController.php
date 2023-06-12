@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\FE;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+
 
 
 
@@ -10,8 +13,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-
-        $role1 = \Sentinel::getRoleRepository()->createModel()->create([
+//
+    /*    $role1 = \Sentinel::getRoleRepository()->createModel()->create([
             'name' => 'Admin',
             'slug' => 'admin',
         ]);
@@ -38,8 +41,10 @@ class HomeController extends Controller
         $activation = \Activation::create($user2);
         $role2->users()->attach($user2);
 
+*/
 
-        // $prods = Product::all();
-        // return view('fe.index', compact('prods'));
+
+return view('fe.layout.layout');
     }
+    
 }

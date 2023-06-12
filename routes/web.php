@@ -1,14 +1,19 @@
 <?php
 
-use App\Http\Controllers\FE\HomeController;
+
+
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\FE\HomeController;
 
-Route::get('/', function () {
-    return view('admin.home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/product/{slug}', [HomeController::class, 'productDetails'])
+        ->name('productDetails');
+
+
+
 
 
